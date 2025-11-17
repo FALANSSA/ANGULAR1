@@ -125,3 +125,15 @@ function sravn(a, b) {
 console.log(sravn(15, 25));
 console.log(sravn(2, 8));
 console.log(sravn(3, 4));
+
+/////////////////////////////////////////////////////////////////
+var Age1 = 23;
+if (Age1 < 18) {
+    console.log('Доступ запрещён!');
+}
+if (Age1 >= 18) {
+    console.log('Доступ разрешен!');
+    for (var i = 1; i <= 10; i++) {
+        console.log(Age1 + ' x ' + i, '= ' + Age1 * i);
+    }
+}
