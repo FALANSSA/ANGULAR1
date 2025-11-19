@@ -174,3 +174,92 @@ console.log('57 - 24 = ', calc(57, 24, '-'));
 console.log('146 × 456 = ', calc(146, 456, '*'));
 console.log('111 ÷ 36 = ', calc(111, 36, '/'));
 /////////////////////////////////////////////////////////////////
+//1
+const nam:string[] = ['name1', 'name2', 'name3']
+const age:number[] = [12, 22, 32];
+const bool:boolean[] = [true, true, false];
+//2
+const fruits: string[] = ['яблоко','банан','апельсин']
+console.log(fruits[0])
+console.log(fruits[2])
+//3
+const book = {
+    title: 'сигма',
+    author: 'Ептин Е Б',
+    year: 1980
+};
+console.log('Книга:', book)
+console.log('Название:', book.title)
+console.log('Автор:', book.author)
+console.log('Год:', book.year)
+//4
+type user = {
+    name:string;
+    age:number;
+}
+const user1:user = {
+    name: 'Аферист',
+    age: 2
+}
+console.log(user1)
+//5
+interface chavo1{
+    name:string
+    age:number
+}
+const chavo:chavo1[] = [
+    { name: 'name1', age: 12 },
+    { name: 'name2', age: 22 },
+    { name: 'name3', age: 32 },
+]
+for (let i=0;i<chavo.length;i++){
+    console.log('Имя: '+chavo[i].name+', Возаст: '+chavo[i].age)
+}
+//6
+const number = [1,2,3]
+number.push(4)
+console.log(number)
+//7
+const num1 = [1,2,3,4]
+const umn = num1.map((num)=>num*10)
+console.log(umn)
+//8
+const age1 = [12, 1238, 1, 3, 10]
+const adults = age1.filter((age)=>age>=18)
+console.log(adults)
+//9
+interface User{
+    name:string
+    age:number
+}
+
+interface chavo1{
+    name:string
+    age:number
+}
+const chavov:chavo1[] = [
+    { name: 'name1', age: 12 },
+    { name: 'name2', age: 22 },
+    { name: 'name3', age: 32 },
+]
+const name2 = 'Иван'
+const user = chavov.find((u)=>u.name===name2)
+if (user){
+    console.log('Найден: '+user.name+', '+user.age+' лет')
+}
+if (!user){
+    console.log('Пользователь не найден')
+}
+//10
+const number1 = [1, 32, -12, 3, 27, 1];
+const pos = number1.filter((num)=>num>0).map((num)=>num*2)
+console.log(pos)
+//11
+const sort1 = [21, 2, 1, 0];
+const def = [...sort1].sort()
+console.log('По умолчанию:',def)
+const asc = [...sort1].sort((a,b)=>a-b)
+console.log('Возрастание:',asc)
+const des = [...sort1].sort((a,b)=>b-a)
+console.log('Убывание:',des)
+/////////////////////////////////////////////////////////////////
