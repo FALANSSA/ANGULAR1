@@ -261,3 +261,94 @@ sortedAvailableProducts.forEach(product => {
     console.log(`- ${product.name}: ${product.price} руб`);
 });
 /////////////////////////////////////////////////////////////////
+//
+async function loadPosts() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const posts = await response.json();
+        return posts;
+    } catch (error) {
+        console.error('Ошибка при загрузке постов:', error);
+        return [];
+    }
+}
+
+async function loadPostById(id) {
+    try {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const post = await response.json();
+        return post;
+    } catch (error) {
+        console.error('Ошибка при загрузке поста:', error);
+        return null;
+    }
+}
+
+async function loadUsers() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const users = await response.json();
+        return users;
+    } catch (error) {
+        console.error('Ошибка при загрузке пользователей:', error);
+        return [];
+    }
+}
+
+async function main() {
+    console.log('=== Загрузка постов ===');
+    const posts = await loadPosts();
+    
+    if (posts.length > 0) {
+        const firstPost = posts[0];
+        console.log('Первый пост:');
+        console.log('ID:', firstPost.id);
+        console.log('Заголовок:', firstPost.title);
+        console.log('Текст:', firstPost.body);
+        console.log('---');
+    }
+
+    console.log('=== Загрузка поста по ID ===');
+    const postById = await loadPostById(1);
+    if (postById) {
+        console.log('Пост с ID 1:', postById.title);
+    }
+    console.log('---');
+
+    console.log('=== Пользователи с именами длиннее 10 символов ===');
+    const users = await loadUsers();
+    const longNameUsers = users.filter(user => user.name.length > 10);
+    longNameUsers.forEach(user => {
+        console.log('Имя:', user.name);
+    });
+    console.log('---');
+
+    console.log('=== Тексты всех постов ===');
+    const allPosts = await loadPosts();
+    const postBodies = allPosts.map(post => post.body);
+    console.log('Тексты постов:', postBodies);
+    console.log('---');
+
+    console.log('=== Поиск поста с заголовком "qui est esse" ===');
+    const targetPost = allPosts.find(post => post.title === "qui est esse");
+    if (targetPost) {
+        console.log('Найден пост:');
+        console.log('ID:', targetPost.id);
+        console.log('Заголовок:', targetPost.title);
+        console.log('Текст:', targetPost.body);
+    } else {
+        console.log('Пост не найден');
+    }
+}
+
+main();
+/////////////////////////////////////////////////////////////////
