@@ -352,3 +352,34 @@ async function main() {
 
 main();
 /////////////////////////////////////////////////////////////////
+async function loadPosts1() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const posts = await response.json();
+        return posts;
+    } catch (error) {
+        console.error('Error loading posts:', error);
+        return [];
+    }
+}
+
+async function main1() {
+    const posts = await loadPosts1();
+
+    const userIds = posts.map(post => post.userId);
+    
+    console.log('All user IDs from posts:');
+    console.log(userIds);
+
+    const uniqueUserIds = [...new Set(userIds)];
+    console.log('Unique user IDs:');
+    console.log(uniqueUserIds);
+
+    console.log('List of all user IDs:');
+    userIds.forEach((userId, index) => {
+        console.log(`${index + 1}. User ID: ${userId}`);
+    });
+}
+
+main1();
+/////////////////////////////////////////////////////////////////
