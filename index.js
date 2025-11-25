@@ -1,10 +1,9 @@
 console.log(1);
-//practic 1
-//1
+
 var string = 'Privet';
 var nomer = 69;
 var shtoto = false;
-//2
+
 var variable = 5;
 variable = "текст";
 variable = true;
@@ -13,13 +12,12 @@ function show() {
     console.log("...");
 }
 show();
-//practic 2
+
 var count = 0;
 console.log(count);
 count = 99;
 console.log(count);
-//practic 3
-//1
+
 var a = 25;
 var b = 4;
 var sum = a + b;
@@ -29,7 +27,7 @@ if (sum % 2 === 0) {
 if (sum % 2 != 0) {
     console.log("Число " + sum + " нечётное");
 }
-//2
+
 var sc = 0;
 sc += 1;
 sc += 1;
@@ -37,14 +35,13 @@ sc += 1;
 sc -= 1;
 sc -= 1;
 console.log(sc);
-//3
+
 var wallet = 1000;
 wallet += 200;
 wallet *= 0.7;
 wallet /= 2;
 console.log(wallet);
-//practic 4
-//1
+
 var speed = 80;
 var isRoadClear = false;
 if (speed <= 60 || !isRoadClear) {
@@ -53,7 +50,7 @@ if (speed <= 60 || !isRoadClear) {
 if (speed >= 80 && isRoadClear) {
     console.log('Опасно');
 }
-//2
+
 var hk = true;
 var knowsPassword = false;
 if (hk && knowsPassword) {
@@ -65,53 +62,53 @@ if ((hk && !knowsPassword) || (!hk && knowsPassword)) {
 if (!hk && !knowsPassword) {
     console.log("Доступ запрещён");
 }
-//practic 5
-//1
+
 var sum1 = 0;
 for (var i = 1; i <= 10; i++) {
     sum1 += i;
 }
 console.log(sum1);
-//2
+
 var A = 5;
 var res = 1;
 for (var i = 1; i <= 10; i++) {
     res = A * i;
     console.log(A + "×" + i + "=" + res);
 }
-//3
+
 var n = 6;
 var fac = 1;
 for (var i = 1; i <= n; i++) {
     fac *= i;
 }
 console.log(fac);
-// Практика Функции
+
+//practic functions
 //1
 function add(a, b) {
     return a + b;
 }
-console.log(add(3, 5));
-console.log(add(24, 35));
-console.log(add(-44, 4));
+console.log(add(12, 2));
+console.log(add(34, 35));
+console.log(add(-34, 37));
 //2
 function greet(name) {
-    if (name === void 0) { name = "Имя"; }
-    console.log("Здраствуйте, " + name + "!");
+    if (name === void 0) { name = "name"; }
+    console.log("еу, " + name + "!");
 }
-greet("Красавчик");
+greet("...");
 //3
 function isEven(num) {
     return num % 2 === 0;
 }
-console.log(isEven(6));
+console.log(isEven(7));
 console.log(isEven(8));
 //4
 function sq(num) {
     return num * num;
 }
 console.log(sq(5));
-console.log(sq(3));
+console.log(sq(10));
 //5
 function sravn(a, b) {
     if (a > b) {
@@ -122,117 +119,131 @@ function sravn(a, b) {
     }
     return "равны";
 }
-console.log(sravn(15, 25));
-console.log(sravn(2, 8));
-console.log(sravn(3, 4));
+console.log(sravn(13, 28));
+console.log(sravn(4, 15));
+console.log(sravn(33, 4));
 
-/////////////////////////////////////////////////////////////////
-var Age1 = 23;
-if (Age1 < 18) {
-    console.log('Доступ запрещён!');
+//д/з
+var Age = 17;
+if (Age < 18) {
+    console.log('нет доступа!');
 }
-if (Age1 >= 18) {
-    console.log('Доступ разрешен!');
+if (Age >= 18) {
+    console.log('доступ есть!');
     for (var i = 1; i <= 10; i++) {
-        console.log(Age1 + ' x ' + i, '= ' + Age1 * i);
+        console.log(Age + ' x ' + i, '= ' + Age * i);
     }
 }
-/////////////////////////////////////////////////////////////////
-function calc(a, b, operator) {
-    if (operator === '+') {
+//д/з 2
+function calculator(a, b, c) {
+    if (c === '+') {
         return a + b;
     }
-    if (operator === '-') {
+    if (c === '-') {
         return a - b;
     }
-    if (operator === '*') {
+    if (c === '*') {
         return a * b;
     }
-    if (operator === '/') {
+    if (c === '/') {
         return a / b;
     }
     return 0;
 }
-
-console.log('50 + 35 = ', calc(50, 35, '+'));
-console.log('57 - 24 = ', calc(57, 24, '-'));
-console.log('146 × 456 = ', calc(146, 456, '*'));
-console.log('111 ÷ 36 = ', calc(111, 36, '/'));
-/////////////////////////////////////////////////////////////////
+console.log('12 + 21 = ',
+    calculator(12, 21, '+'));
+console.log('3 - 23 = ',
+    calculator(3, 23, '-'));
+console.log('4 × 11 = ',
+    calculator(4, 11, '*'));
+console.log('45 ÷ 23 = ',
+    calculator(45, 23, '/'));
+//
 //1
-const nam = ['name1', 'name2', 'name3'];
-const age = [12, 22, 32];
-const bool = [true, true, false];
+const names = ['ivan', 'petr', 'sidor'];
+const ages = [25, 30, 35];
+const flags = [false, true, false];
+
 //2
-const fruits = ['яблоко', 'банан', 'апельсин'];
-console.log(fruits[0]);
-console.log(fruits[2]);
+const vegetables = ['помидор', 'огурец', 'морковь'];
+console.log(vegetables[0]);
+console.log(vegetables[2]);
+
 //3
-const book = {
-    title: 'сигма',
-    author: 'Ептин Е Б',
-    year: 1980
+const movie = {
+    title: 'альфа',
+    director: 'Иванов А В',
+    year: 1995
 };
-console.log('Книга:', book);
-console.log('Название:', book.title);
-console.log('Автор:', book.author);
-console.log('Год:', book.year);
+console.log('Фильм:', movie);
+console.log('Название:', movie.title);
+console.log('Режиссер:', movie.director);
+console.log('Год:', movie.year);
+
 //4
-const user1 = {
-    name: 'Аферист',
-    age: 2
+const client = {
+    name: 'Максим',
+    age: 28
 };
-console.log(user1);
+console.log(client);
+
 //5
-const chavo = [
-    { name: 'name1', age: 12 },
-    { name: 'name2', age: 22 },
-    { name: 'name3', age: 32 },
+const employees = [
+    { name: 'анна', age: 25 },
+    { name: 'михаил', age: 30 },
+    { name: 'елена', age: 28 },
 ];
-for (let i = 0; i < chavo.length; i++) {
-    console.log('Имя: ' + chavo[i].name + ', Возраст: ' + chavo[i].age);
+for (let i = 0; i < employees.length; i++) {
+    console.log('Имя: ' + employees[i].name + ', Возраст: ' + employees[i].age);
 }
+
 //6
-const number = [1, 2, 3];
-number.push(4);
-console.log(number);
+const digits = [5, 6, 7];
+digits.push(8);
+console.log(digits);
+
 //7
-const num1 = [1, 2, 3, 4];
-const umn = num1.map((num) => num * 10);
-console.log(umn);
+const values = [2, 3, 4, 5];
+const multiplied = values.map((val) => val * 5);
+console.log(multiplied);
+
 //8
-const age1 = [12, 1238, 1, 3, 10];
-const adults = age1.filter((age) => age >= 18);
-console.log(adults);
+const userAges = [15, 25, 17, 40, 16];
+const mature = userAges.filter((age) => age >= 18);
+console.log(mature);
+
 //9
-const chavov = [
-    { name: 'name1', age: 12 },
-    { name: 'name2', age: 22 },
-    { name: 'name3', age: 32 },
+const customers = [
+    { name: 'анна', age: 25 },
+    { name: 'михаил', age: 30 },
+    { name: 'елена', age: 28 },
 ];
-const namem = 'name3';
-const user = chavov.find((u) => u.name === namem);
-if (user) {
-    console.log('Найден: ' + user.name + ', ' + user.age + ' лет');
+const searchName = 'михаил';
+const foundUser = customers.find((u) => u.name === searchName);
+if (foundUser) {
+    console.log('Найден: ' + foundUser.name + ', ' + foundUser.age + ' лет');
 }
-if (!user) {
+if (!foundUser) {
     console.log('Пользователь не найден');
 }
+
 //10
-const number1 = [1, 32, -12, 3, 27, 1];
-const pos = number1.filter((num) => num > 0).map((num) => num * 2);
-console.log(pos);
+const mixedNumbers = [5, -3, 15, 0, 8, -1];
+const positiveDoubled = mixedNumbers.filter((num) => num > 0).map((num) => num * 3);
+console.log(positiveDoubled);
+
 //11
-const sort1 = [21, 2, 1, 0];
-const def = [...sort1].sort();
-console.log('По умолчанию:', def);
-const asc = [...sort1].sort((a, b) => a - b);
-console.log('Возрастание:', asc);
-const des = [...sort1].sort((a, b) => b - a);
-console.log('Убывание:', des);
-/////////////////////////////////////////////////////////////////
-//2
-const products = [
+const unsorted = [45, 8, 12, 3];
+const defaultSort = [...unsorted].sort();
+console.log('По умолчанию:', defaultSort);
+const ascending = [...unsorted].sort((a, b) => a - b);
+console.log('Возрастание:', ascending);
+const descending = [...unsorted].sort((a, b) => b - a);
+console.log('Убывание:', descending);
+//
+//
+//1
+const productList = [
     { name: 'Ноутбук', price: 50000, inStock: true },
     { name: 'Мышь', price: 1500, inStock: false },
     { name: 'Клавиатура', price: 3000, inStock: true },
@@ -240,146 +251,152 @@ const products = [
     { name: 'Наушники', price: 5000, inStock: false }
 ];
 
-const availableProducts = products.filter(product => product.inStock);
+const availableItems = productList.filter(product => product.inStock);
 console.log('Товары в наличии:');
-availableProducts.forEach(product => {
-    console.log(`- ${product.name}: ${product.price} руб`);
+availableItems.forEach(product => {
+    console.log(`- ${product.name}: ${product.price} руб.`);
 });
 
-const availablePrices = availableProducts.map(product => product.price);
-console.log('Цены товаров в наличии:', availablePrices.join(', '));
+const prices = availableItems.map(product => product.price);
+console.log('Цены товаров:', prices.join(', '));
 
-let totalSum = 0;
-for (let i = 0; i < availableProducts.length; i++) {
-    totalSum += availableProducts[i].price;
+let total = 0;
+for (let i = 0; i < availableItems.length; i++) {
+    total += availableItems[i].price;
 }
-console.log(`Общая сумма товаров в наличии: ${totalSum} руб`);
+console.log(`Общая стоимость: ${total} руб.`);
 
-const sortedAvailableProducts = [...availableProducts].sort((a, b) => a.price - b.price);
-console.log('Отсортированные товары в наличии (от дешёвых к дорогим):');
-sortedAvailableProducts.forEach(product => {
-    console.log(`- ${product.name}: ${product.price} руб`);
+const byPrice = [...availableItems].sort((first, second) => first.price - second.price);
+console.log('Сортировка по цене:');
+byPrice.forEach(product => {
+    console.log(`- ${product.name}: ${product.price} руб.`);
 });
-/////////////////////////////////////////////////////////////////
 //
-async function loadPosts() {
+//
+async function obtainBlogEntries() {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        const serverResponse = await fetch('https://jsonplaceholder.typicode.com/posts');
+        if (!serverResponse.ok) {
+            throw new Error(`Проблема с соединением: ${serverResponse.status}`);
         }
-        const posts = await response.json();
-        return posts;
+        const entries = await serverResponse.json();
+        return entries;
     } catch (error) {
-        console.error('Ошибка при загрузке постов:', error);
+        console.error('Сбой при получении записей:', error);
         return [];
     }
 }
 
-async function loadPostById(id) {
+async function obtainEntryById(entryNumber) {
     try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        const serverResponse = await fetch(`https://jsonplaceholder.typicode.com/posts/${entryNumber}`);
+        if (!serverResponse.ok) {
+            throw new Error(`Проблема с соединением: ${serverResponse.status}`);
         }
-        const post = await response.json();
-        return post;
+        const entry = await serverResponse.json();
+        return entry;
     } catch (error) {
-        console.error('Ошибка при загрузке поста:', error);
+        console.error('Ошибка получения записи:', error);
         return null;
     }
 }
 
-async function loadUsers() {
+async function obtainCommunityMembers() {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        const serverResponse = await fetch('https://jsonplaceholder.typicode.com/users');
+        if (!serverResponse.ok) {
+            throw new Error(`Проблема с соединением: ${serverResponse.status}`);
         }
-        const users = await response.json();
-        return users;
+        const members = await serverResponse.json();
+        return members;
     } catch (error) {
-        console.error('Ошибка при загрузке пользователей:', error);
+        console.error('Не удалось загрузить участников:', error);
         return [];
     }
 }
 
-async function main() {
-    console.log('=== Загрузка постов ===');
-    const posts = await loadPosts();
+async function runApplication() {
+    console.log('>>>>> ЗАПИСИ БЛОГА');
+    const blogEntries = await obtainBlogEntries();
     
-    if (posts.length > 0) {
-        const firstPost = posts[0];
-        console.log('Первый пост:');
-        console.log('ID:', firstPost.id);
-        console.log('Заголовок:', firstPost.title);
-        console.log('Текст:', firstPost.body);
+    if (blogEntries.length > 0) {
+        const firstEntry = blogEntries[0];
+        console.log('Начальная запись:');
+        console.log('Номер:', firstEntry.id);
+        console.log('Заголовок:', firstEntry.title);
+        console.log('Текст записи:', firstEntry.body);
         console.log('---');
     }
 
-    console.log('=== Загрузка поста по ID ===');
-    const postById = await loadPostById(1);
-    if (postById) {
-        console.log('Пост с ID 1:', postById.title);
+    console.log('>>>>> ЗАПРОС ЗАПИСИ ПО НОМЕРУ');
+    const entryById = await obtainEntryById(1);
+    if (entryById) {
+        console.log('Запись номер 1:', entryById.title);
     }
     console.log('---');
 
-    console.log('=== Пользователи с именами длиннее 10 символов ===');
-    const users = await loadUsers();
-    const longNameUsers = users.filter(user => user.name.length > 10);
-    longNameUsers.forEach(user => {
-        console.log('Имя:', user.name);
+    console.log('>>>>> УЧАСТНИКИ С ДЛИННЫМИ ИМЕНАМИ');
+    const communityMembers = await obtainCommunityMembers();
+    const membersWithLongNames = communityMembers.filter(member => member.name.length > 10);
+    membersWithLongNames.forEach(member => {
+        console.log('Участник:', member.name);
     });
     console.log('---');
 
-    console.log('=== Тексты всех постов ===');
-    const allPosts = await loadPosts();
-    const postBodies = allPosts.map(post => post.body);
-    console.log('Тексты постов:', postBodies);
+    console.log('>>>>> СОДЕРЖАНИЕ ЗАПИСЕЙ');
+    const allEntries = await obtainBlogEntries();
+    const entryContents = allEntries.map(entry => entry.body);
+    console.log('Содержание записей:', entryContents);
     console.log('---');
 
-    console.log('=== Поиск поста с заголовком "qui est esse" ===');
-    const targetPost = allPosts.find(post => post.title === "qui est esse");
-    if (targetPost) {
-        console.log('Найден пост:');
-        console.log('ID:', targetPost.id);
-        console.log('Заголовок:', targetPost.title);
-        console.log('Текст:', targetPost.body);
+    console.log('>>>>> ПОИСК ЗАПИСИ ПО ЗАГОЛОВКУ');
+    const foundEntry = allEntries.find(entry => entry.title === "qui est esse");
+    if (foundEntry) {
+        console.log('Найдена запись:');
+        console.log('Номер:', foundEntry.id);
+        console.log('Заголовок:', foundEntry.title);
+        console.log('Содержание:', foundEntry.body);
     } else {
-        console.log('Пост не найден');
+        console.log('Запись отсутствует в каталоге');
     }
 }
 
-main();
-/////////////////////////////////////////////////////////////////
-async function loadPosts1() {
+runApplication();
+//
+async function getBlogPosts() {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-        const posts = await response.json();
-        return posts;
+        const serverResponse = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const postsData = await serverResponse.json();
+        return postsData;
     } catch (error) {
-        console.error('Error loading posts:', error);
+        console.error('Problem fetching posts data:', error);
         return [];
     }
 }
 
-async function main1() {
-    const posts = await loadPosts1();
+async function run() {
+    const allPosts = await getBlogPosts();
 
-    const userIds = posts.map(post => post.userId);
+    const userIdentifiers = allPosts.map(post => post.userId);
     
-    console.log('All user IDs from posts:');
-    console.log(userIds);
+    console.log('User IDs from all posts:');
+    console.log(userIdentifiers);
 
-    const uniqueUserIds = [...new Set(userIds)];
+    const uniqueUsers = Array.from(new Set(userIdentifiers));
     console.log('Unique user IDs:');
-    console.log(uniqueUserIds);
+    console.log(uniqueUsers);
 
-    console.log('List of all user IDs:');
-    userIds.forEach((userId, index) => {
-        console.log(`${index + 1}. User ID: ${userId}`);
+    console.log('User ID for each post:');
+    userIdentifiers.forEach((userId, index) => {
+        console.log(`Post ${index + 1} belongs to user ${userId}`);
     });
-}
 
-main1();
-/////////////////////////////////////////////////////////////////
+    console.log(`Summary:
+    Posts processed: ${allPosts.length}
+    Different users: ${uniqueUsers.length}
+    Most active user: ${uniqueUsers.reduce((a, b) => 
+        userIdentifiers.filter(id => id === a).length > userIdentifiers.filter(id => id === b).length ? a : b
+    )}`);
+}
+run();
+//
