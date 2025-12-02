@@ -1,5 +1,12 @@
-<h1>{{ title }}</h1>
-<p>Результат математической операции: {{ operation }}</p>
-<router-outlet></router-outlet>
+<div class="app-container">
 
-<app-pages></app-pages>
+  <div class="main-wrapper">
+    <app-sidebar></app-sidebar>
+
+    <main class="content-area">
+      <app-pages></app-pages>
+    </main>
+  </div>
+
+  <app-footer></app-footer>
+</div>
