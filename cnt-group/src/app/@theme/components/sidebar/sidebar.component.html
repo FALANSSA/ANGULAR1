@@ -2,6 +2,7 @@
   <div class="sidebar-header">
     <h2>Навигация</h2>
   </div>
+
   <nav class="sidebar-nav">
     <ul>
       <li *ngFor="let item of menuItems">
@@ -12,7 +13,13 @@
       </li>
     </ul>
   </nav>
+
+  <div class="sidebar-divider"></div>
+
+  <h3 class="dynamic-menu-title">Разделы</h3>
+
   <app-menu-childrens />
+
   <div class="sidebar-footer">
     <p>Версия 1.0.0</p>
   </div>
