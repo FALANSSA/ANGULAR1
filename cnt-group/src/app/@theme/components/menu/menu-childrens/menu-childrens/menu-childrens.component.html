@@ -4,7 +4,9 @@
       class="submenu__item"
       *ngFor="let subItem of menuChildrenItems"
       [ngClass]="{ 'show-children': subItem.showSubMenu }"
-      tabindex="0">
+      tabindex="0"
+      [routerLink]="subItem.itemLink"
+      >
 
       <span>
         {{ subItem.itemName }}
@@ -19,6 +21,6 @@
         <app-menu-childrens [parentItem]="subItem"></app-menu-childrens>
       </div>
 
- </li>
+    </li>
   </ul>
 </div>
