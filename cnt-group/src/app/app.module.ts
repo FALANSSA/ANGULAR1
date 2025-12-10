@@ -22,7 +22,7 @@ import { ThemeSwitcherComponent } from './@theme/components/header/theme-switche
     SidebarComponent,
     MenuParentsComponent,
     MenuChildrensComponent,
-    ThemeSwitcherComponent
+    ThemeSwitcherComponent,
   ],
   imports: [
     BrowserModule,
