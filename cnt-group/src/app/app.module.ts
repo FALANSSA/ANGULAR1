@@ -12,6 +12,7 @@ import { MenuParentsComponent } from './@theme/components/menu/menu-parents/menu
 import { CommonModule } from '@angular/common';
 import { MenuChildrensComponent } from './@theme/components/menu/menu-childrens/menu-childrens/menu-childrens.component';
 import { ThemeSwitcherComponent } from './@theme/components/header/theme-switcher/theme-switcher.component';
+import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ThemeSwitcherComponent } from './@theme/components/header/theme-switche
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    CommonModule
+    CommonModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
