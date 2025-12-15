@@ -7,12 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { AddUserFormComponent } from './pages/users-page/components/add-user-form/add-user-form.component';
+import { EditUserComponent } from './pages/users-page/components/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
     AdminPageComponent,
     UsersPageComponent,
-    AddUserFormComponent
+    AddUserFormComponent,
+    EditUserComponent
   ],  imports: [
     AdministrationRoutingModule,
     CommonModule,
