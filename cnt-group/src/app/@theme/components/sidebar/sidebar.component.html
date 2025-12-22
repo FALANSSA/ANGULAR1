@@ -1,4 +1,9 @@
-<aside class="sidebar">
+<aside class="sidebar" [class.show]="isSidebarVisible">
+  <!-- Кнопка внутри сайдбара -->
+  <button class="toggle-button" (click)="toggleSidebar()">
+    <span>{{ isSidebarVisible ? '◀============' : '==▶' }}</span>
+  </button>
+
   <div class="sidebar-header">
     <h2>Навигация</h2>
   </div>
@@ -18,7 +23,7 @@
 
   <h3 class="dynamic-menu-title">Разделы</h3>
 
-  <app-menu-childrens />
+  <app-menu-childrens [sidebarHidden]="!isSidebarVisible" />
 
   <div class="sidebar-footer">
     <p>Версия 1.0.0</p>

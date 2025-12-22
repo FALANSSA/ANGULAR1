@@ -3,7 +3,6 @@ import { MenuService } from '../../services/menu.service';
 import { MenuItem } from '../../../models/menu.model';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
-
 @Component({
   selector: 'app-menu-childrens',
   templateUrl: './menu-childrens.component.html',
@@ -20,7 +19,6 @@ export class MenuChildrensComponent implements OnInit {
     if (this.parentItem) {
       this.menuChildrenItems = this.menuService.getChildrenItems(this.parentItem);
     } else {
-
       this.menuService.currentItem$.subscribe(currentItem => {
         if (currentItem) {
           this.menuChildrenItems = this.menuService.getChildrenItems(currentItem);
@@ -29,7 +27,8 @@ export class MenuChildrensComponent implements OnInit {
     }
   }
 
-  toggleSubMenu(item: MenuItem) {
+  toggleSubMenu(item: MenuItem, event: Event) {
+    event.stopPropagation();
     item.showSubMenu = !item.showSubMenu;
 
     if (item.showSubMenu) {
@@ -38,7 +37,6 @@ export class MenuChildrensComponent implements OnInit {
       item.subMenuItems = null;
     }
   }
-
 
   getSafeHtml(icon: string | null): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(icon || '');
