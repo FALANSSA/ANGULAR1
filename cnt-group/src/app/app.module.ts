@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';  // ДОБАВИТЬ ЭТУ СТРОКУ
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { SharedModule } from './modules/shared/shared.module';
     RouterModule,
     CommonModule,
     SharedModule,
+    HttpClientModule,  // ДОБАВИТЬ ЭТУ СТРОКУ
   ],
   providers: [],
   bootstrap: [AppComponent]
