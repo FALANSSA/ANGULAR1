@@ -2,13 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './sections/main-page/main-page.component';
 import { PagesComponent } from './pages.component';
-import { AuthGuard } from '../guards/auth.guard';  // ДОБАВИТЬ
 
 const routes: Routes = [
   {
     path: '',
     component: PagesComponent,
-    canActivate: [AuthGuard],  // ДОБАВИТЬ - защита всех дочерних маршрутов
     children: [
       {
         path: 'mainPage',
